@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelscapes</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="icon" href="images/New Project (1).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="kashmir.css">
+    <link rel="stylesheet" href="kerala.css">
+    <link rel="stylesheet" href="tamil_nadu.css">
+    <link rel="stylesheet" href="rajasthan.css">
+    <link rel="stylesheet" href="sikkim.css">
+
+    <style>
+        /* Hide the default audio player controls */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background audio setup -->
+    <audio id="background-audio" autoplay loop>
+        <source src="Images/audio.ogg" type="audio/ogg">
+        <source src="Images/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript to ensure playback -->
+    <script>
+        window.addEventListener('load', function () {
+            const audio = document.getElementById('background-audio');
+
+            // Check if the browser has autoplay restrictions
+            audio.play().catch((error) => {
+                console.warn('Autoplay failed. Attempting to unmute and retry...', error);
+                audio.muted = true; // Mute initially to bypass autoplay restrictions
+                audio.play().then(() => {
+                    audio.muted = false; // Unmute after audio starts playing
+                }).catch((retryError) => {
+                    console.error('Retry failed:', retryError);
+                });
+            });
+        });
+    </script>
+
+    <div class="main">
+        <nav>
+            <span>
+                <img src="images/finalimage.png" width="220">
+            </span>
+            <div class="header">
+                <ul>
+                    <li><a href="aboutus.html" class="dropdownbtn">About</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdownbtn">Help</a>
+                        <div id="dropdownService">
+                            <a href="contact.html">Contact Us</a>
+                            <a href="terms.html"> Terms & Conditions</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdownbtn">My Account</a>
+                        <div id="dropdownService">
+                            <a href="./signup.php">Sign-Up</a>
+                            <a href="./signin.php">Sign-In</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="box"></div>
+        <div class="slogan">
+            <h1>Your Adventure Awaits.</h1>
+            <p id="SecondMainLine">Explore India with Us!</p>
+        </div>
+
+        <span id="lowerofimage">Unlock Lesser-Known of India</span>
+        <div class="place1">
+            <img src="images/place1.jpeg" width="200">
+            <p id="incontent1">Experience the magic of Rajasthan...</p>
+            <p id="linkcontent1"><a href="rajasthanog.html">Discover the Gems of Rajasthan...</a></p>
+        </div>
+        <div class="place2">
+            <img src="images/place2.jpeg" width="200">
+            <p id="incontent2">Where every view is a masterpiece...</p>
+            <p id="linkcontent2"><a href="kashmir.html">Discover the Gems of Kashmir...</a></p>
+        </div>
+
+        <span id="faqPart">Frequently Asked Questions</span>
+        <div class="faq-maindiv">
+            <div class="faq-card">
+                <div class="question1">What is the best time to visit India?</div>
+                <div class="answer1">The best time to visit India...</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="popularSearch">
+                <p class="p3Head">Trending Searches</p>
+                <p class="p1">Tourism in Kerala</p>
+                <p class="p1">Tourism in Tamil Nadu</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

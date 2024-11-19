@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Travelscapes</title>
+        <link rel="stylesheet" href="website.css">
+        <link rel="icon" href="images/New Project (1).png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="aboutus.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <span>
+                    <img src="images/finalimage.png" width="220">
+                </span>
+                <div class="header">
+                    <ul>
+                        <li><a href="aboutus.html" class="dropdownbtn">About</a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdownbtn">Help</a>
+                            <div id="dropdownService">
+                                <a href="">Contact Us</a>
+                                <a href="">Terms & Policies</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="dropdownbtn">My Account</a>
+                            <div id="dropdownService">
+                                <!-- Links to PHP Sign Up and Sign In -->
+                                <a href="./signup.php">Sign-Up</a>
+                                <a href="./signin.php">Sign-In</a>
+                                <a href="./logout.php" id="logout" style="display: none;">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="box"></div>
+            <div class="slogan">
+                <h1>Your Adventure Awaits.</h1>
+                <p id="SecondMainLine">Explore India with Us!</p>
+            </div>
+
+            <br>
+            <br>
+            <span id="lowerofimage">Unlock Lesser-Known Gems of India</span>
+            <br>
+            <br>
+            <br>
+            <!-- Example of one state -->
+            <div class="place1">
+                <img src="images/place1.jpeg" width="200">
+                <p id="incontent1">
+                    Experience the magic of Rajasthan – a land where tradition meets adventure, and every sunset feels like a painting.
+                </p>
+                <p id="linkcontent1">
+                    <a href="rajasthan.html">Discover the Gems of Rajasthan – Click here to explore the top attractions!</a>
+                </p>
+            </div>
+            <!-- Add other states here -->
+            <footer>
+                <div class="popularSearch">
+                    <p class="p3Head">Trending Searches</p>
+                    <p class="p1">Tourism in Kerala</p>
+                    <p class="p1">Tourism in Tamil Nadu</p>
+                </div>
+                <div class="fotterBottom">
+                    <p class="span">© 2024 Travelscapes, India. All Rights Reserved</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- PHP script for session check -->
+        <?php
+        session_start();
+        if (isset($_SESSION['user_email'])) {
+            echo "<script>
+                document.getElementById('logout').style.display = 'block';
+            </script>";
+        }
+        ?>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0097a7;
+}
+
+/* Error Messages */
+p.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Success Message */
+p.success {
+    color: green;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Back to Home Button */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional Styling */
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+}
+
+.signup-signin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.signup-signin-container .back-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1.page-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+    color: #333;
+}
